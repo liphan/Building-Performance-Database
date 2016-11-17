@@ -13,8 +13,8 @@ import urlparse
 
 # Inputs
 BPD_URL     = "https://bpd-api.lbl.gov"
-USER_NAME   = False  # Replace with API username (string)
-API_KEY     = False  # Replace with API key      (string)
+USER_NAME   = 'liphan.pang@gmail.com'  # Replace with API username (string)
+API_KEY     = '96c67bb3-59b8-4da0-baa0-4ac91fc8c3e2'  # Replace with API key      (string)
 HEADERS     = {"Content-Type": "application/json",
                "Authorization": "ApiKey {}:{}".format(USER_NAME, API_KEY)}
 TIMEOUT     = {"metadata":{"message":"error",
@@ -153,31 +153,32 @@ if __name__ == "__main__":
     #Note: Remove ["metadata"]["message"] to see full object returned.
 
     # This block runs the introspective functions.
-    print rootquery()
-    print fields(payload={"field_type":"numerical"})["metadata"]["message"]
-    print group_by(payload={"field_type":"categorical"})["metadata"]["message"]
-
-    # This block runs example queries for a peer group of Commercial buildings in California.
+    #print rootquery()
+    #print fields(payload={})#["metadata"]["message"]
+    # print fields(payload={"field_type":"numerical"})["metadata"]["message"]
+    # print group_by(payload={"field_type":"categorical"})["metadata"]["message"]
+    #
+    # # This block runs example queries for a peer group of Commercial buildings in California.
     peer_group = {"state":["CA"], "building_class":["Commercial"]}
-    print count(filters=peer_group)["metadata"]["message"]
-    print histogram(filters=peer_group,
-                    group_by=["source_eui"])["metadata"]["message"]
-    print scatterplot(filters=peer_group,
-                      xaxis="floor_area",
-                      yaxis="source_eui")["metadata"]["message"]
+    # print count(filters=peer_group)["metadata"]["message"]
+    # print histogram(filters=peer_group,
+    #                 group_by=["source_eui"])["metadata"]["message"]
+    # print scatterplot(filters=peer_group,
+    #                   xaxis="floor_area",
+    #                   yaxis="source_eui")["metadata"]["message"]
     print table(filters=peer_group,
                 group_by=["facility_type"],
-                analyze_by="source_eui")["metadata"]["message"]
+                analyze_by="source_eui")#["metadata"]["message"]
 
     # This block runs an example Regression comparison analysis,
     # comparing commerical buildings in California with VAV control to CAV control.
-    peer_group   = {"state":["CA"],
-                    "building_class":["Commercial"],
-                    "air_flow_control":["Variable Volume","Constant Volume"]}
-    compare_from = {"air_flow_control":["Constant Volume"]}
-    compare_to   = {"air_flow_control":["Variable Volume"]}
-    print comparepeergroup(from_filters=compare_from,
-                           to_filters=compare_to,
-                           analyze_by="source_eui",
-                           base=peer_group,
-                           method="regression")["metadata"]["message"]
+    # peer_group   = {"state":["CA"],
+    #                 "building_class":["Commercial"],
+    #                 "air_flow_control":["Variable Volume","Constant Volume"]}
+    # compare_from = {"air_flow_control":["Constant Volume"]}
+    # compare_to   = {"air_flow_control":["Variable Volume"]}
+    # print comparepeergroup(from_filters=compare_from,
+    #                        to_filters=compare_to,
+    #                        analyze_by="source_eui",
+    #                        base=peer_group,
+    #                        method="regression")["metadata"]["message"]
