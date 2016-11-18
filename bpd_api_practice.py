@@ -163,31 +163,45 @@ peer_group = {"state":["CA"], "building_class":["Commercial"]}
     #                   yaxis="source_eui")["metadata"]["message"]
 
 r = table(filters=peer_group,group_by=["facility_type"],analyze_by="source_eui")#["metadata"]["message"]
-#print r['table']
+print r["table"]
 
 #https://gist.github.com/amirziai/2808d06f59a38138fa2d
 
-def flatten_json(y):
-    out = {}
+# def flatten_json(y):
+#     out = {}
+#
+#     def flatten_json(row, name=''):
+#         if type(row) is dict:
+#             for n in row:
+#                 flatten_json(row[n], name + n + '_')
+#         elif type(row) is list:
+#             i = 0
+#             for n in row:
+#                 flatten_json(n, name + str(i) + '_')
+#                 i += 1
+#         else:
+#             out[str(name[:-1])]= str(row)
+#
+#     flatten_json(y)
+#     return out
+#
+# flat = json_normalize(flatten_json(r['table']))
+#
+# with open('mycsvfile.csv', 'wb') as f:
+#     w = csv.DictWriter(f, flat.keys())
+#     w.writeheader()
+#     w.writerow(flat)
 
-    def flatten_json(row, name=''):
-        if type(row) is dict:
-            for n in row:
-                flatten_json(row[n], name + n + '_')
-        elif type(row) is list:
-            i = 0
-            for n in row:
-                flatten_json(n, name + str(i) + '_')
-                i += 1
-        else:
-            out[str(name[:-1])]= str(row)
-
-    flatten_json(y)
-    return out
-
-flat = json_normalize(flatten_json(r['table']))
-
-with open('mycsvfile.csv', 'wb') as f:
-    w = csv.DictWriter(f, flat.keys())
-    w.writeheader()
-    w.writerow(flat)
+x = r["table"]
+f = csv.writer(open("test.csv", "wb+"))
+f.writerow(["count", "percentile_0", "facility_type", "percentile_50", "standard_dev",
+            "percentile_25", "percentile_75", "mean"])
+for x in x:
+    f.writerow([x["count"],
+                x["percentile_0"],
+                x["group"]["value"],
+                x["percentile_50"],
+                x["standard_deviation"],
+                x["percentile_25"],
+                x["percentile_75"],
+                x["mean"]])
