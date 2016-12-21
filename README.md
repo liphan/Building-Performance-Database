@@ -1,9 +1,13 @@
 # Building Performance Benchmarking
 
+This project is a bench-marking tool for Energy Usage Intensity (EUI) of a selected building type (eg. Education) at a selected location 
+(eg. Oregon).
 
-For a new building to be built, or an existing building to be retrofitted:
+This tool can be used prior to constructing a new building, or retrofitting an existing building.
 
-Based on building location, type and design features, this project identifies other similar existing buildings and analyses their energy efficiencies for benchmarking.
+Based on building location, type and feature, this project identifies other similar existing buildings in the same location and analyses the aggregate EUI for benchmarking.
+
+
 
 
 
