@@ -7,9 +7,9 @@ This tool can be used prior to constructing a new building, or retrofitting an e
 
 Based on building location, type and feature, this project identifies other similar existing buildings in the same location and analyses the aggregate EUI for benchmarking.
 
-bpd_api_practice.py - query data from Building Performance Database and then store the result as csv files in local computer
+_bpd_api_practice.py_ - query data from Building Performance Database and then store the result as csv files in local computer
 
-explore.ipynb - explore the result / data in the csv files
+_explore.ipynb_ - explore the result / data in the csv files
 
 
 
