@@ -1,9 +1,24 @@
 # Building Performance Benchmarking
 
 
-For a new building to be built, or an existing building to be retrofitted:
+This project is a benchmarking tool for Energy Usage Intensity (EUI) of a selected building type (eg. Education) at a selected location 
+(eg. Oregon).
 
-Based on building location, type and design features, this project identifies other similar existing buildings and analyses their energy efficiencies for benchmarking.
+
+This tool can be used prior to constructing a new building, or retrofitting an existing building.
+
+
+
+
+Based on building location, type and feature, this project identifies other similar existing buildings in the same location and analyses the aggregate EUI for benchmarking.
+
+
+
+
+_bpd_api_practice.py_ - query data from Building Performance Database and then store the result as csv files in local computer
+
+
+_explore.ipynb_ - explore the result / data in the csv files
 
 
 

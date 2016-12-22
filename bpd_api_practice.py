@@ -154,7 +154,7 @@ def comparepeergroup(from_filters, to_filters, analyze_by, base={}, method="actu
     #
     # # This block runs example queries for a peer group of Commercial buildings in California.
 
-peer_group = {"state":["CA"], "building_class":["Commercial"]}
+#peer_group = {"state":["CA"] }
     # print count(filters=peer_group)["metadata"]["message"]
     # print histogram(filters=peer_group,
     #                 group_by=["source_eui"])["metadata"]["message"]
@@ -162,8 +162,8 @@ peer_group = {"state":["CA"], "building_class":["Commercial"]}
     #                   xaxis="floor_area",
     #                   yaxis="source_eui")["metadata"]["message"]
 
-r = table(filters=peer_group,group_by=["facility_type"],analyze_by="source_eui")#["metadata"]["message"]
-print r["table"]
+# r = table(filters=peer_group,group_by=["facility_type","floor_area"],analyze_by="site_eui")#["metadata"]["message"]
+# print r["table"]
 
 #https://gist.github.com/amirziai/2808d06f59a38138fa2d
 
@@ -191,17 +191,30 @@ print r["table"]
 #     w = csv.DictWriter(f, flat.keys())
 #     w.writeheader()
 #     w.writerow(flat)
+states = ['NY','CA','OR']
+# states = [AL,AK,AZ,AR,CA,CO,CT,DC,DE,FL,GA,GU,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,
+#             MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,PR,RI,SC,SD,TN,
+#             TX,UT,VT,VA,VI,WA,WV,WI,WY]
+#x = r["table"]
+for n in states:
+    peer_group = {"state":[n] }
+    r = table(filters=peer_group,group_by=["facility_type","floor_area"],analyze_by="site_eui")
+    x = r['table']
+    f = csv.writer(open("%s_facility_area.csv" %n, "wb+"))
+    f.writerow(["count", "percentile_0", "facility_type", "floor_area_min", "floor_area_max", "percentile_50",
+            "standard_dev",
+            "percentile_25", "percentile_75", "percentile_100", "mean"])
 
-x = r["table"]
-f = csv.writer(open("test.csv", "wb+"))
-f.writerow(["count", "percentile_0", "facility_type", "percentile_50", "standard_dev",
-            "percentile_25", "percentile_75", "mean"])
-for x in x:
-    f.writerow([x["count"],
+    for x in x:
+
+        f.writerow([x["count"],
                 x["percentile_0"],
-                x["group"]["value"],
+                x["group"][0]["value"],
+                x["group"][1]["min"],
+                x["group"][1]["max"],
                 x["percentile_50"],
                 x["standard_deviation"],
                 x["percentile_25"],
                 x["percentile_75"],
+                x["percentile_100"],
                 x["mean"]])
