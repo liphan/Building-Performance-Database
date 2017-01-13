@@ -191,10 +191,10 @@ def comparepeergroup(from_filters, to_filters, analyze_by, base={}, method="actu
 #     w = csv.DictWriter(f, flat.keys())
 #     w.writeheader()
 #     w.writerow(flat)
-states = ['NY','CA','OR']
-# states = [AL,AK,AZ,AR,CA,CO,CT,DC,DE,FL,GA,GU,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,
-#             MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,PR,RI,SC,SD,TN,
-#             TX,UT,VT,VA,VI,WA,WV,WI,WY]
+#states = ['NY','CA','OR']
+states = ['AL','AK','AZ','AR','CA','CO','CT','DC','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA',
+            'MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','PR','RI','SC','SD','TN',
+            'TX','UT','VA','WA','WV','WI','WY']    # ['GU','VT','VI'] returns error when run: x = r['table'], KeyError: 'table'
 #x = r["table"]
 for n in states:
     peer_group = {"state":[n] }

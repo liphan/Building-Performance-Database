@@ -1,0 +1,26 @@
+count,percentile_0,facility_type,floor_area_min,floor_area_max,percentile_50,standard_dev,percentile_25,percentile_75,percentile_100,mean
+0,,Service - Post office or postal center,20000.0,50000.0,,,,,,
+0,,Multifamily - Uncategorized,10000.0,20000.0,,,,,,
+0,,Commercial - Uncategorized,50000.0,100000.0,,,,,,
+0,,Education - Uncategorized,50000.0,100000.0,,,,,,
+0,,Warehouse - Non-refrigerated,10000.0,20000.0,,,,,,
+0,,Health Care - Inpatient,200000.0,14500000.0,,,,,,
+0,,Education - Elementary or middle school,20000.0,50000.0,,,,,,
+10,50.39490445859872,Service - Post office or postal center,10000.0,20000.0,107.5870570107858,49.1562900799252,81.11217868102015,141.942268491555,214.7669902912621,114.82229815033433
+0,,Office - Uncategorized,5000.0,10000.0,,,,,,
+0,,Food Sales,100000.0,200000.0,,,,,,
+0,,Food Service - Uncategorized,1000.0,2000.0,,,,,,
+0,,Retail - Uncategorized,100000.0,200000.0,,,,,,
+12,32.0,Retail - Uncategorized,50000.0,100000.0,48.790959922344385,9.457899361718743,41.00350819421386,51.859129592419436,65.36205105517733,47.5298427281289
+0,,Service - Post office or postal center,5000.0,10000.0,,,,,,
+14,23.186333768561163,Retail - Uncategorized,10000.0,20000.0,110.96926149422194,40.00058023644409,72.36169441402873,126.66145724643253,160.58074758262373,100.86802517204912
+0,,Commercial - Other,1000.0,2000.0,,,,,,
+0,,Food Sales,200000.0,14500000.0,,,,,,
+0,,Commercial - Other,20000.0,50000.0,,,,,,
+0,,Office - Uncategorized,50000.0,100000.0,,,,,,
+0,,Multifamily - Uncategorized,20000.0,50000.0,,,,,,
+0,,Education - Elementary or middle school,100000.0,200000.0,,,,,,
+0,,Commercial - Uncategorized,5000.0,10000.0,,,,,,
+10,43.24561435477831,Office - Uncategorized,20000.0,50000.0,77.5519908365822,52.16667804304962,52.74096425540104,105.71345235179868,214.26337448559667,91.59079731435705
+0,,Food Service - Restaurant or cafeteria,2000.0,5000.0,,,,,,
+0,,Office - Uncategorized,2000.0,5000.0,,,,,,

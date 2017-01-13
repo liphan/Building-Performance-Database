@@ -1,0 +1,26 @@
+count,percentile_0,facility_type,floor_area_min,floor_area_max,percentile_50,standard_dev,percentile_25,percentile_75,percentile_100,mean
+0,,Multifamily - Uncategorized,10000.0,20000.0,,,,,,
+0,,Single Family - Detached,0.0,1000.0,,,,,,
+0,,Food Service - Uncategorized,1000.0,2000.0,,,,,,
+0,,Apartment Unit,1000.0,2000.0,,,,,,
+20,51.706661773129774,Retail - Uncategorized,10000.0,20000.0,105.4224410845473,27.340013831523983,66.84658342764433,116.67318686305366,129.58298647242455,94.04982351134329
+0,,Health Care - Inpatient,200000.0,14500000.0,,,,,,
+0,,Office - Uncategorized,10000.0,20000.0,,,,,,
+0,,Education - College or university,10000.0,20000.0,,,,,,
+0,,Commercial - Unknown,10000.0,20000.0,,,,,,
+23,13.0,Retail - Uncategorized,20000.0,50000.0,56.33349261608795,22.592412636612455,51.564242941915396,75.3021216128085,121.0,61.84413536840208
+0,,Service - Post office or postal center,10000.0,20000.0,,,,,,
+0,,Education - Elementary or middle school,50000.0,100000.0,,,,,,
+0,,Food Sales,100000.0,200000.0,,,,,,
+0,,Single Family - Attached,0.0,1000.0,,,,,,
+0,,Education - College or university,20000.0,50000.0,,,,,,
+11,34.45378718781135,Retail - Uncategorized,50000.0,100000.0,41.9817744705265,8.187011129639048,38.94205732646833,50.6750510705445,59.150247949767106,44.88959379304355
+66,5.024352574144482,Single Family - Detached,2000.0,5000.0,24.022008265181974,11.749969972673375,15.211586310576969,30.612237617901776,74.33607702128197,23.920146791123436
+0,,Food Sales,200000.0,14500000.0,,,,,,
+0,,Food Service - Uncategorized,2000.0,5000.0,,,,,,
+0,,Apartment Unit,0.0,1000.0,,,,,,
+0,,Public Assembly - Recreation,20000.0,50000.0,,,,,,
+20,4.384878545662412,Single Family - Detached,1000.0,2000.0,32.68288015440021,12.67582835199311,22.863742927344713,39.15443654188459,53.24690331534265,30.343821221942694
+0,,Retail - Big Box (> 50K sf),50000.0,100000.0,,,,,,
+0,,Retail - Uncategorized,100000.0,200000.0,,,,,,
+0,,Single Family - Detached,5000.0,10000.0,,,,,,
